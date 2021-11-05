@@ -16,7 +16,7 @@ export class App extends React.Component {
     } else {
       tasks = JSON.parse(tasks);
     }
-    console.log(tasks)
+    
     const count = tasks.length;
 
     this.state = { count, tasks };
