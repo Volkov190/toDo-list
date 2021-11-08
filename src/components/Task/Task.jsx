@@ -22,7 +22,7 @@ export default function Task(props) {
       >
         {props.text}
       </p>
-        <div className={styles.removeBtn} onClick={props.onRemove}></div>
+      <div className={styles.removeBtn} onClick={props.onRemove}></div>
     </div>
   );
 }
