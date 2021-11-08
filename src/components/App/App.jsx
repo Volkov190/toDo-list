@@ -10,13 +10,12 @@ export class App extends React.Component {
     super(props);
 
     let tasks = localStorage.getItem("tasks");
-    
-    if (!tasks || tasks === '') {
+    if (tasks == null || tasks === "") {
       tasks = [{ text: "Create to do list", isDone: false }];
     } else {
       tasks = JSON.parse(tasks);
     }
-    
+
     const count = tasks.length;
 
     this.state = { count, tasks };
@@ -90,7 +89,7 @@ export class App extends React.Component {
     const count = this.state.count - 1;
 
     this.setState({ tasks, count });
-    
+
     tasks = JSON.stringify(tasks);
     localStorage.setItem("tasks", tasks);
   }
